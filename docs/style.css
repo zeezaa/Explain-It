@@ -4,7 +4,15 @@
 	top: 0;
 	width: 100%;
 	text-align: center;
-	padding: 2%;
+	padding: 1.5%;
+}
+
+:link{
+	color: #4444fc;
+}
+
+:visited{
+	color: #4444fc;
 }
 
 .usercreator {
@@ -26,13 +34,55 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	padding: 1%;
+	padding: 0.5%;
 	text-align: center;
+	height: 7%;
+}
+
+.chatbox{
+	position: fixed;
+	right: 0;
+	top: 9.5%;
+	bottom: 10%;
+	width: 25%;
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+	clip-path: polygon(0 7%, 10% 0, 100% 0, 100% 100%, 10% 100%, 0 93%);
+	webkit-clip-path: polygon(0 7%, 10% 0, 100% 0, 100% 100%, 10% 100%, 0 93%);
+}
+
+.chatscroll {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow:auto;
+	align-items: center;
+	justify-content: center;
+	clip-path: polygon(0 7%, 10% 0, 100% 0, 100% 100%, 10% 100%, 0 93%);
+	webkit-clip-path: polygon(0 7%, 10% 0, 100% 0, 100% 100%, 10% 100%, 0 93%);
+}
+
+.chatscroll > div {
+	display: flex;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	column-gap: 0.25em;
+	margin-bottom: 0.25em;
+	align-items: center;
+}
+
+.message{
+	flex-basis: 100%;
+}
+
+.textbox{
+	margin: 4%;
 	height: 8%;
 }
 
-p{
-	font-size: 1.875em;
+.profile{
+	
 }
 
 @media (prefers-color-scheme: light) {
@@ -43,6 +93,22 @@ p{
 	
 	.header {
 		background-color: #F1F1F1;
+	}
+	
+	.chatbox {
+		background-color: #F1F1F1;
+	}
+	
+	.message{
+		background-color: #FFF;
+	}
+	
+	.event{
+		background-color: red;
+	}
+	
+	.item{
+		background-color: DodgerBlue;
 	}
 	
 	.footer {
@@ -62,6 +128,22 @@ p{
 	
 	.header {
 		background-color: #010101;
+	}
+	
+	.chatbox {
+		background-color: #010101;
+	}
+	
+	.message{
+		background-color: #333;
+	}
+	
+	.event{
+		background-color: red;
+	}
+	
+	.item{
+		background-color: DodgerBlue;
 	}
 	
 	.footer {
