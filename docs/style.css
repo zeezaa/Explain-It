@@ -2,9 +2,14 @@
 	position: fixed;
 	left: 0;
 	top: 0;
+	height: 2%;
 	width: 100%;
 	text-align: center;
 	padding: 1.5%;
+}
+
+a{
+	cursor: pointer;
 }
 
 :link{
@@ -65,24 +70,128 @@
 
 .chatscroll > div {
 	display: flex;
-	padding-left: 0.25em;
-	padding-right: 0.25em;
-	column-gap: 0.25em;
-	margin-bottom: 0.25em;
+	padding: 0.2em;
+	column-gap: 0.5em;
+	margin-top: 0.5em;
 	align-items: center;
+}
+
+.event{
+	background-color: red;
+	padding: 0.5em;
+	clip-path: polygon(0 15%, 10% 0, 90% 0, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0 85%);
+	webkit-clip-path: polygon(0 15%, 10% 0, 90% 0, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0 85%);
+}
+
+.item{
+	background-color: blue;
+	padding: 0.5em;
+	clip-path: polygon(0 15%, 10% 0, 90% 0, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0 85%);
+	webkit-clip-path: polygon(0 15%, 10% 0, 90% 0, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0 85%);
+}
+
+.cardname{
+	margin-top: 0.2em;
+	margin-bottom: 0;
 }
 
 .message{
 	flex-basis: 100%;
+	height: 5.5em;
+	padding: 0.25em;
+}
+
+.text{
+	overflow: auto;
+	display: -webkit-box;
+	line-clamp: 3; 
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	padding-right: 0.2em;
+	margin: 0.5em;
+}
+
+.user{
+	margin-left: 0.5em;
+	margin-top: 0.2em;
+	margin-bottom: 0;
 }
 
 .textbox{
-	margin: 4%;
-	height: 8%;
+	margin-left: 3em;
+	margin-top: 0.5em;	
 }
 
+.game{
+	position: fixed;
+	top: 8.5%;
+	bottom: 10%;
+	left: 0;
+	right: 30%;
+}
+
+.card{}
+
 .profile{
-	
+	position: absolute;
+	width: 9em;
+	height: 7em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	overflow:hidden;
+	align-items: center;
+	background-color: #010101;
+	clip-path: polygon(0 15%, 10% 0, 90% 0, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0 85%);
+	webkit-clip-path: polygon(0 15%, 10% 0, 90% 0, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0 85%);
+}
+
+.profile > *{
+	margin: 0;
+}
+
+#p0{
+	left: 25%;
+	bottom: 0%;
+}
+
+#p1{
+	left: 10%;
+	bottom: 30%;
+}
+
+#p2{
+	left: 20%;
+	bottom: 70%;
+}
+
+#p3{
+	left: 50%;
+	bottom: 80%;
+}
+
+#p4{
+	left: 80%;
+	bottom: 70%;
+}
+
+#p5{
+	left: 90%;
+	bottom: 30%;
+}
+
+.score{
+	position: absolute;
+	bottom: 0;
+}
+
+.pfp{
+	width: 5.75em;
+	height: 5.75em;
+}
+
+.account{
+	color: #7f7fff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -101,14 +210,6 @@
 	
 	.message{
 		background-color: #FFF;
-	}
-	
-	.event{
-		background-color: red;
-	}
-	
-	.item{
-		background-color: DodgerBlue;
 	}
 	
 	.footer {
@@ -136,14 +237,6 @@
 	
 	.message{
 		background-color: #333;
-	}
-	
-	.event{
-		background-color: red;
-	}
-	
-	.item{
-		background-color: DodgerBlue;
 	}
 	
 	.footer {
